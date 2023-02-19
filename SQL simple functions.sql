@@ -43,6 +43,9 @@ select left(122322333,4); -- > 1223
 -- MID helps to retrive spesific part of the String
 select mid("347 5th ave, New York, NY,11223",13,9 ); -- > New York  
 
+-- "america" should get output as "America"
+  select concat(upper(left('america', 1)),lower(substring('america',2))); -- > America
+
 
 
    
