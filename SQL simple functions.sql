@@ -41,7 +41,7 @@ select right("1223-22-333","3"); -- > 333 (as String)
 select left(122322333,4); -- > 1223
 
 -- MID helps to retrive spesific part of the String
-select mid("347 5th ave, New York, NY,11223",13,9 ); -- > New York New=13 
+select mid("347 5th ave, New York, NY,11223",13,9 ); -- > New York  
 
 
 
