@@ -20,20 +20,20 @@
    -- concat
    select concat("Suberbowl","2023","-","Kansas wins!");
    
--- format is used with number to organize them better
-select format(12345678.90,3); -- ,1,2,3,4 divedes long number with ',' for better withable 
+                        -- format is used with number to organize them better
+                        select format(12345678.90,3); -- ,1,2,3,4 divedes long number with ',' for better withable 
 
--- adding $ sighn
-select concat("$", format(12345678.90,2)); -- query will read from inside
+                        -- adding $ sighn
+                        select concat("$", format(12345678.90,2)); -- query will read from inside
 
--- round
-select round(12345678.99);
+                         -- round
+                         select round(12345678.99);
 
--- Ucase, Lcase, Upper, Lower
-select lcase("America");
-select ucase("America");
-select upper("America");
-select lower("America");
+                         -- Ucase, Lcase, Upper, Lower
+                         select lcase("America");
+                         select ucase("America");
+                         select upper("America");
+                         select lower("America");
 
 -- LEFT and RIGHT
 select right(122322333,4); -- > 2333 (as int)
@@ -45,6 +45,17 @@ select mid("347 5th ave, New York, NY,11223",13,9 ); -- > New York
 
 -- "america" should get output as "America"
   select concat(upper(left('america', 1)),lower(substring('america',2))); -- > America
+  
+                          -- Substring and Substring_index
+                          select substring("United States of America","18","7"); -- > output Amerika 
+                          select substr("United States of America","18","7") as Country; -- > America
+                          select substring_index("www.forbes.com/com/blog/new_topic/org","/",1); -- > output www.forbes.com
+
+                          -- Instr, Locate, Position retrive, locate or position the char in the string
+                          select instr("Duotech Academy", "h" ); -- > 7 (shows numeric location of the char
+                          select locate("tech","Duotech Academy"); -- > 4 ("t" starts from number 4)
+                          select position("C" in "Duotech Academy"); -- > 6
+
 
 
 
