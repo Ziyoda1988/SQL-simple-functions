@@ -1,11 +1,17 @@
--- String manipulation
+-- String manipulation                                                                        -- LPad/RPad
+                                                                                             select Lpad(123456789,11,"A"); -- >> AA123456789
+                                                                                             select rpad(123456789,12,"A");  -- >> 123456789AA
+                                                                                             select lpad("USA",12,"NEW YORK-"); -- >>NEW YORK-USA
 /* SQL - stands for STRUCTURED QUERY LANGUAGE;
    Seequel = SQL;
-   SQL is not sensetive: select or SElect or SELECT;
-   */
+   SQL is not sensetive: select or SElect or SELECT;                                             
+  */                                                                                                     -- Ltrim/Rtrim
+                                                                                             select ltrim("     United Kingdom"); -- >> removes space
+                                                                                             select Rtrim("United Kingdom     "); -- >> removes space
+   
    -- Calculate the length of string
    select length("Superbowl 2023 - Kansas wins!");
-   
+                                                                                             
    -- reverse the string
    select reverse("Superbowl 2023 - Kansas wins!");
    
@@ -17,7 +23,7 @@
    -- concat_ws 12122000 > 12/12/2000
    select concat_ws("/","12","12","2000");
    
-   -- concat
+     -- concat
    select concat("Suberbowl","2023","-","Kansas wins!");
    
                         -- format is used with number to organize them better
@@ -55,6 +61,13 @@ select mid("347 5th ave, New York, NY,11223",13,9 ); -- > New York
                           select instr("Duotech Academy", "h" ); -- > 7 (shows numeric location of the char
                           select locate("tech","Duotech Academy"); -- > 4 ("t" starts from number 4)
                           select position("C" in "Duotech Academy"); -- > 6
+
+-- Sum, avarage, min, max, count etc...
+select concat("$", format(max(salary),0)) as max_salary from emploees; -- >> we will get salary with $ sighn and in decimal currency format
+select concat("$", format(min(salary),0)) as min_salary from emploees;
+select concat("$", format(sum(salary),0)) as sum_salary from emploees;
+select concat("$", format(count(salary),0)) as count_salary from emploees;
+select concat("$", format(avg(salary),2)) as avarage_salary from emploees;
 
 
 
