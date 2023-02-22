@@ -9,7 +9,7 @@
                                                                                              select ltrim("     United Kingdom"); -- >> removes space
                                                                                              select Rtrim("United Kingdom     "); -- >> removes space
    
-   -- Calculate the length of string
+   -- Calculate the length of string                                                         drop database (your database wich you want delete); -- >> deletes database
    select length("Superbowl 2023 - Kansas wins!");
                                                                                              
    -- reverse the string
